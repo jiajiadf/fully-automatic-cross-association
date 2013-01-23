@@ -1,7 +1,7 @@
 #labels FACA
 = Introduction =
 
-This project is an implementation of a clustering algorithm based on paper [http://dl.acm.org/citation.cfm?id=1014052.1014064 Fully Automatic Cross-associations](FACA) and [http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=4781146&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D4781146 DisCo: Distributed Co-clustering with Map-Reduce](DisCo), this algorithm is the first step of my further research of recommender algorithm. FACA depends on Mahout, so you should add Mahout into your classpath.
+This project is an implementation of a clustering algorithm based on paper [http://dl.acm.org/citation.cfm?id=1014052.1014064 Fully Automatic Cross-associations](FACA) and [http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=4781146&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D4781146 DisCo: Distributed Co-clustering with Map-Reduce](DisCo), this algorithm is the first step of my further research of recommender algorithm. FACA depends on [http://mahout.apache.org/ Mahout], so you should add Mahout into your classpath.
 
 = Details =
 
@@ -10,11 +10,11 @@ This project is an implementation of a clustering algorithm based on paper [http
 There two major part of the clustering algorithm, (1)Split the group, (2)ReGroup, according to DisCo, algorithm of (2) can be parallel, but (1) can't.
 
 === Steps ===
-1. Given a input file such as ml-100k's data file, faca parses it into an PreferenceArray in Mahout and calculates the statistic information of each cluster
-2. Find the row cluster with maximum entropy and split this row
-3. ReGroup
-4. Calculating the total cost, if it lower than before, go to step 2, else go to step 5
-5. Do the same thing but for column
+# Given a input file such as ml-100k's data file, faca parses it into an PreferenceArray in Mahout and calculates the statistic information of each cluster
+# Find the row cluster with maximum entropy and split this row
+# ReGroup
+# Calculating the total cost, if it lower than before, go to step 2, else go to step 5
+# Do the same thing but for column
 
 I've implement two versions of faca, CrossAssociationSearch() is the algorithm in FACA and CrossAssociationSearch2() is a new version  which do the split and regroup for row and group alternately.
 
