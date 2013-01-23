@@ -1,7 +1,7 @@
 #labels FACA
 = Introduction =
 
-This project is an implementation of a clustering algorithm based on paper Fully Automatic Cross-associations[1] and DisCo: Distributed Co-clustering with Map-Reduce[2], this algorithm is the first step of my further research of recommender algorithm. FACA depends on Mahout, so you should add Mahout into your classpath.
+This project is an implementation of a clustering algorithm based on paper [http://dl.acm.org/citation.cfm?id=1014052.1014064 Fully Automatic Cross-associations] and DisCo: Distributed Co-clustering with Map-Reduce[2], this algorithm is the first step of my further research of recommender algorithm. FACA depends on Mahout, so you should add Mahout into your classpath.
 
 = Details =
 
